@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Why MVC is so Imp?",
+    "description": "MVC is important to understand because it is the basic structure which most web applications are built on. ."
+  },
+  {
+    "title": "What are middleware in Express?",
+    "description": "Middleware functions are functions that have access to the request object ( req ), the response object ( res ), and the next function in the application's request-response cycle"
+  },
+  {
+    "title": "Router function",
+    "description": "The express. Router() function is used to create a new router object"
+    
+  }
+]
