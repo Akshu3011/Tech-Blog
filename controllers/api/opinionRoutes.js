@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Opinion } = require('../../models');
+const { Blog, Opinion } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -31,10 +31,15 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
+    const blogData = await Blog.findAll({
+      where:{
+        user_id: req.session.user_id,
+      }
+      });
     const opinionData = await Opinion.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        blog_id: blogData.user_id,
       },
     });
 

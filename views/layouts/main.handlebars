@@ -7,7 +7,7 @@
   <title>Tech Blog!</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    
-  <link rel="stylesheet" href="/css/jass.css">
+ 
   <link rel="stylesheet" href="/css/style.css">
   
 </head>
@@ -17,10 +17,10 @@
     <div class="nav-wrapper">
       
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/homepage">Home</a></li>
-        <li><a href="/main">Dshboard</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/" class="dashboard">Dashboard</a></li>
         <li> {{#if logged_in}}
-        <a href="/profile">Profile</a> |
+        <a href="/profile">Profile</a> 
         <li><button class="no-button" id="logout">Logout</button></li>
        <li>{{else}}
         <a href="/login">Login</a>

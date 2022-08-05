@@ -15,4 +15,5 @@ Blog.hasMany(Opinion,{
   foreignKey: 'blog_id'
 })
 
+
 module.exports = { User, Blog , Opinion };

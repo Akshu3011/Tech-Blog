@@ -3,10 +3,25 @@
   
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <div class="row">
+    <form class="col s12 comment">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Comment</label>
+              <p>
+    <button class="btn btn-primary data-com">Add Comment</button>  
+  </p>
+        </div>
+      </div>
+    </form>
+  </div>
+
   <p>
-  
+    <button class="btn btn-primary data-id">Delete Blog</button>  
   </p>
   <p>
-    <button class="btn btn-primary">Welcome to Blog!!</button>
+    <button class="btn btn-primary">Update Blog</button>
   </p>
 </div>
+<script src="./js/profile.js"></script>
