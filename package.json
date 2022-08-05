@@ -6,14 +6,27 @@
   },
   "dependencies": {
     "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "seed": "^0.4.4"
+    "expres": "^0.0.5",
+    "express": "^4.18.1"
   },
   "name": "tech-blog",
   "description": "Application which is  a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.6.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "express": "^4.18.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.3.3",
+    "prettier": "^2.1.2",
+    "seed": "^0.4.4",
+    "sequelize": "^6.3.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Akshu3011/Tech-Blog.git"

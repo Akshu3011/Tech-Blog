@@ -19,12 +19,10 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-  for (const opinion of opinionData) {
-    await Opinion.create({
-      ...opinion,
-      blog_id: blogs[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+
+ 
+
+      //  blog_id: blog[Math.floor(Math.random() * users.length)].id,
 
   process.exit(0);
 };
