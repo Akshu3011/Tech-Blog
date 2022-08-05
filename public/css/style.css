@@ -1,7 +1,9 @@
 header, .blog:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
+#nav-mobile >li{
+  color: blue;
+}
 .no-button {
   background: none;
   border: none;
