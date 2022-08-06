@@ -13,6 +13,7 @@
     <button class="btn btn-primary addcomment"  data-id="{{id}}">Add Comment</button>  
   </p>
         </div>
+
       </div>
     </form>
   </div>
@@ -24,13 +25,13 @@
     <button class="btn btn-primary" data-up-id="{{id}}">Update Blog</button>
   </p>
 </div>
-<script src="../js/dashboard.js"></script>
+
 
  {{#if opinion.length}}
   <div class="col-md-6 blog-list">
     <h3>User Comments:</h3>
 
-    {{#each opinions as |opinion|}}
+    {{#each opinion as |opinion|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/opinion/{{opinion.id}}">{{opinion.comment}}</a></h4>
@@ -43,3 +44,4 @@
   </div>
   {{/if}}
 </div>
+<script src="../js/dashboard.js"></script>

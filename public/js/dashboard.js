@@ -18,7 +18,7 @@ const commentHandler =async (event) => {
         }
       });
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/api/blog');
     } else {
       alert('Failed to add comment');
     }
