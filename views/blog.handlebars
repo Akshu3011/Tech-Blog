@@ -4,13 +4,13 @@
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <div class="row">
-    <form class="col s12 comment">
+    <form class="col s12 comment-form">
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea"></textarea>
           <label for="textarea1">Comment</label>
               <p>
-    <button class="btn btn-primary data-com">Add Comment</button>  
+    <button class="btn btn-primary addcomment"  data-id="{{id}}">Add Comment</button>  
   </p>
         </div>
       </div>
@@ -18,10 +18,28 @@
   </div>
 
   <p>
-    <button class="btn btn-primary data-id">Delete Blog</button>  
+    <button class="btn btn-primary del-blog" data-del-id="{{id}}" >Delete Blog</button>  
   </p>
   <p>
-    <button class="btn btn-primary">Update Blog</button>
+    <button class="btn btn-primary" data-up-id="{{id}}">Update Blog</button>
   </p>
 </div>
 <script src="../js/dashboard.js"></script>
+
+ {{#if opinion.length}}
+  <div class="col-md-6 blog-list">
+    <h3>User Comments:</h3>
+
+    {{#each opinions as |opinion|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/opinion/{{opinion.id}}">{{opinion.comment}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger " data-op-id="{{opinion.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>

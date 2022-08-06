@@ -16,10 +16,11 @@ router.get('/', async (req, res) => {
  
 });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/:blog_id', withAuth, async (req, res) => {
   try {
     const newOpinion = await Opinion.create({
-      ...req.body,
+      comment:req.body.comment,
+      blog_id: req.params.blog_id,
       user_id: req.session.user_id,
     });
 
