@@ -5,7 +5,6 @@ const newFormHandler = async (event) => {
   
   const description = document.querySelector('#blog-desc').value.trim();
 
-// const commentval =document.querySelector('#textarea1').value.trim();
 
 
   if (title && description) {
@@ -47,30 +46,8 @@ const delButtonHandler = async (event) => {
 };
 
 
-/*
-const commentHandler =async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const blogid = event.target.getAttribute('data-id');
-    console.log(blogid);
-      const response = await fetch(`/api/opinion`, {
-        method: 'POST',
-        body: JSON.stringify({ 
-          comment: commentval, 
-          blog_id: blogid }),
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to add comment');
-    }
-  }
-};
 
 
-*/
 document
   .querySelector('.new-blog-form')
   .addEventListener('submit', newFormHandler);
@@ -78,7 +55,3 @@ document
 document
   .querySelector('.blog-list')
   .addEventListener('click', delButtonHandler);
-/*
-document
-.querySelector('.comment')
-.addEventListener('click', commentHandler);*/
